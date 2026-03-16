@@ -1,6 +1,6 @@
-# 🗺️ AI Engineer with .NET — Visual Roadmap
+# 🗺️ Dotnet AI Engineer — Visual Roadmap
 
-> A visual overview of the complete learning path from fundamentals to autonomous agents.
+> **A strategic overview of the 6-week journey to mastering AI engineering within the .NET ecosystem.**
 
 ---
 

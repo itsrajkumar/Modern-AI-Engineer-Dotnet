@@ -1,64 +1,51 @@
-# 🤖 AI Engineer with .NET — Complete Roadmap
+<div align="center">
+
+<img src="./assets/ai_engineer_dotnet_banner.png" alt="AI Engineer with .NET Roadmap Banner" width="100%">
+
+# 🧠 Dotnet AI Engineer Roadmap
+### Master the Modern AI Stack with C# and .NET
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![Semantic Kernel](https://img.shields.io/badge/Semantic_Kernel-1.x-742774?logo=microsoft&logoColor=white)](https://learn.microsoft.com/semantic-kernel/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
-
-> **A comprehensive, 6-week, day-by-day roadmap to become an AI Engineer using the .NET/C# ecosystem.**
->
-> Skip the Python-heavy tutorials. Leverage your existing .NET expertise to build production-grade AI applications.
+[![Stars](https://img.shields.io/github/stars/itsrajkumar/AI-Engineer-With-.Net?style=social)](https://github.com/itsrajkumar/AI-Engineer-With-.Net)
 
 ---
 
-## 🎯 Who Is This For?
+**Learn to build production-grade AI applications using your existing .NET expertise.**
+*Skip the Python-heavy tutorials. Direct path for C# Engineers.*
 
-This roadmap is designed for **.NET developers with 3+ years of experience** who want to transition into AI Engineering. If you already know:
+[Explore Roadmap](#️-roadmap-overview) • [Quick Start](#-getting-started) • [Tech Stack](#️-tech-stack) • [Contribute](./CONTRIBUTING.md)
 
-- ✅ C# and .NET (Web API, Console Apps, DI)
-- ✅ Entity Framework / Dapper / ADO.NET
-- ✅ SQL Server, MongoDB, or PostgreSQL
-- ✅ REST APIs and backend architecture
+</div>
 
-...then you're ready. This roadmap maps every AI concept directly to C# code.
+---
+
+## 🎯 The Mission
+This community-driven roadmap is designed for **.NET developers** who want to transition into **AI Engineering**. We focus on real-world architecture, mapping every AI concept directly to C# code using the latest Microsoft tools.
+
+### Why this roadmap?
+- 🚀 **C#-First**: No switching to Python for model orchestration.
+- 🏗️ **Architectural Focus**: Learn RAG, Agents, and Vector Storage patterns.
+- 🛠️ **Modern Stack**: Built with .NET 8, Semantic Kernel, and Microsoft.Extensions.AI.
 
 ---
 
 ## 🗺️ Roadmap Overview
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                    AI ENGINEER WITH .NET ROADMAP                    │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│  WEEK 1 ──► AI Fundamentals & .NET API Layer                       │
-│     │       LLMs, Tokens, Prompts, Microsoft.Extensions.AI         │
-│     │       Azure.AI.OpenAI SDK, Chat History, Roles               │
-│     ▼                                                               │
-│  WEEK 2 ──► Microsoft Semantic Kernel (The Orchestrator)           │
-│     │       Kernel Architecture, Semantic Functions                 │
-│     │       Native C# Plugins, Tool Calling, State Management      │
-│     ▼                                                               │
-│  WEEK 3 ──► Embeddings & Data Processing                           │
-│     │       Vector Theory, Generating Embeddings in C#             │
-│     │       Document Chunking, Cosine Similarity, Batch Pipelines  │
-│     ▼                                                               │
-│  WEEK 4 ──► Vector Storage & Semantic Search                       │
-│     │       Vector DBs, MongoDB Atlas, PostgreSQL pgvector         │
-│     │       Hybrid Search, Repository Pattern for Vectors          │
-│     ▼                                                               │
-│  WEEK 5 ──► RAG Pipeline (Retrieval-Augmented Generation)          │
-│     │       Architecture, Retrieval, Augmentation, End-to-End      │
-│     │       Edge Cases, Fallback Logic, Evaluation Metrics         │
-│     ▼                                                               │
-│  WEEK 6 ──► Autonomous AI Agents                                   │
-│     │       ReAct Pattern, SK Planners, Multi-Plugin Agents        │
-│     │       Human-in-the-Loop, Capstone Portfolio Project          │
-│     ▼                                                               │
-│  CAPSTONE ──► AI-Powered Retail Assistant                          │
-│              .NET 8 Web API + RAG + Agents + Frontend              │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    W1[<b>Week 1</b><br/>AI Fundamentals] --> W2[<b>Week 2</b><br/>Semantic Kernel]
+    W2 --> W3[<b>Week 3</b><br/>Embeddings]
+    W3 --> W4[<b>Week 4</b><br/>Vector Storage]
+    W4 --> W5[<b>Week 5</b><br/>RAG Pipelines]
+    W5 --> W6[<b>Week 6</b><br/>AI Agents]
+    W6 --> CP[<b>🏆 Capstone</b><br/>Retail Assistant]
+
+    style W1 fill:#512BD4,color:#fff
+    style W2 fill:#742774,color:#fff
+    style CP fill:#ffd700,color:#000
 ```
 
 ---

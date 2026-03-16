@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+
+### Changed
+- Rebranded repository to **Dotnet AI Engineer Roadmap**.
+- Added professional header banner and enhanced README.md structure.
+- Modernized roadmap visualization with Mermaid diagrams.
+- Standardized documentation titles across the repository.
+
 ## [1.0.0] - 2026-03-16
 
 ### Added

@@ -1,4 +1,4 @@
-# Contributing to AI Engineer with .NET
+# Contributing to Dotnet AI Engineer Roadmap
 
 Thank you for your interest in contributing to this project! This repository is a comprehensive learning resource for AI Engineering using the .NET ecosystem, and contributions are welcome.
 
