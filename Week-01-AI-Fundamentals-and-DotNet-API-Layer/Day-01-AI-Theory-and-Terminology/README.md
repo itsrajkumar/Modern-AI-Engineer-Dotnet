@@ -1,6 +1,8 @@
 # AI Theory & Terminology
 
 > **Type:** 📖 Theory | **Code:** None (pure theory, with conceptual C# examples)
+>
+> 🆕 *Updated with content from [Lesson 1: Introduction to Generative AI](https://github.com/microsoft/Generative-AI-for-beginners-dotnet/blob/main/01-IntroductionToGenerativeAI/readme.md) from Generative AI for Beginners .NET v2*
 
 ---
 
@@ -68,25 +70,39 @@ To dive deeply into these subfields, please review the dedicated detailed guides
 
 ### Real-World Example
 - **Traditional ML:** Train a model on 10,000 support tickets to classify them as "Billing" or "Technical."
-- **Generative AI:** Give GPT-4 a support ticket and ask: *"Classify this ticket and draft a response."* No training needed.
+- **Generative AI:** Give GPT-5 a support ticket and ask: *"Classify this ticket and draft a response."* No training needed.
+
+### 🆕 Key Insight from v2 Course
+
+As the [Generative AI for Beginners .NET v2](https://github.com/microsoft/Generative-AI-for-beginners-dotnet) course puts it:
+
+> *"If you've ever called a REST API, you already have the core skill needed to build AI-powered applications."*
+
+```csharp
+// This is ALL it takes in .NET 10:
+var response = await chatClient.GetResponseAsync("Summarize this customer feedback");
+Console.WriteLine(response);
+```
+
+Your existing .NET skills handle everything else: dependency injection, configuration, error handling, async patterns.
 
 ---
 
 ## 🔤 Large Language Models (LLMs) vs. Small Language Models (SLMs)
 
 ### LLMs — The Heavy Hitters
-- **Examples:** GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro
+- **Examples:** GPT-5, GPT-5-mini, Claude 3.5 Sonnet, Gemini 2.0
 - **Parameters:** 100B+ parameters
 - **Hosting:** Cloud-only (too large for local machines)
 - **Strengths:** Best reasoning, code generation, multi-step tasks
 - **Cost:** $ per API call
 
 ### SLMs — The Efficient Alternatives
-- **Examples:** Phi-3 (Microsoft), Llama 3.1 8B (Meta), Mistral 7B
+- **Examples:** Phi-4 Mini (Microsoft), Llama 3.1 8B (Meta), Mistral 7B
 - **Parameters:** 1B-13B parameters
 - **Hosting:** Can run locally on a good laptop/desktop
 - **Strengths:** Fast, private, cheap; good for focused tasks
-- **Cost:** Free (local inference)
+- **Cost:** Free (local inference with [Ollama](https://ollama.com))
 
 ### When to Use Which?
 
@@ -324,6 +340,28 @@ graph TD
     LLM --- Host
     embed --- Host
 ```
+
+### 🆕 The .NET 10 AI Stack (v2 Layers)
+
+The v2 course introduces a simpler, more practical layer model:
+
+```
+┌────────────────────────────────────────────────┐
+│  Layer 3: Microsoft Agent Framework (MAF)  │
+│  Build agents with tools and multi-agent   │
+│  workflows. (Week 6-7)                     │
+├────────────────────────────────────────────────┤
+│  Layer 2: AI Models (The "Brains")          │
+│  Azure OpenAI / Ollama / OpenAI             │
+│  All work with the same IChatClient!        │
+├────────────────────────────────────────────────┤
+│  Layer 1: Microsoft.Extensions.AI (MEAI)    │
+│  IChatClient + IEmbeddingGenerator          │
+│  Caching, Telemetry, Retries (Week 1, 7)   │
+└────────────────────────────────────────────────┘
+```
+
+> 📚 **Deep dive:** See [Week 7, Day 5: .NET 10 Migration Guide](../../../Week-07-Responsible-AI-and-Production/Day-05-DotNet10-Migration-Guide/README.md) for the complete migration path.
 
 ---
 

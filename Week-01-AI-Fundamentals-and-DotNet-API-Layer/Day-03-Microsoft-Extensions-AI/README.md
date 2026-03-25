@@ -1,6 +1,8 @@
 # Day 3: Introduction to Microsoft.Extensions.AI
 
 > **Type:** 💻 Code | **Time:** ~3 hours | **Project:** ExtensionsAIDemo
+>
+> 🆕 *Updated for .NET 10 with content from [Lesson 1](https://github.com/microsoft/Generative-AI-for-beginners-dotnet/blob/main/01-IntroductionToGenerativeAI/readme.md) and [Lesson 2](https://github.com/microsoft/Generative-AI-for-beginners-dotnet/blob/main/02-GenerativeAITechniques/readme.md) of Generative AI for Beginners .NET v2*
 
 ---
 
@@ -209,6 +211,34 @@ Console.WriteLine("\n✅ Day 3 Complete! You've used Microsoft.Extensions.AI suc
 3. **Streaming** is built-in via `IAsyncEnumerable<T>` — a C# native pattern
 4. **`ChatOptions`** control temperature, max tokens, and other parameters
 5. **User Secrets** keep API keys out of source control
+6. 🆕 **`.NET 10:`** Use `GetResponseAsync()` as the simpler API (replaces `CompleteAsync` in some scenarios)
+7. 🆕 **`.NET 10:`** Use `ChatClientBuilder` middleware for caching, telemetry, and retries
+
+### 🆕 .NET 10 Middleware Preview
+
+In .NET 10, `Microsoft.Extensions.AI` supports composable middleware pipelines (covered in detail in [Week 7, Day 3](../../Week-07-Responsible-AI-and-Production/Day-03-Structured-Output-and-Middleware/README.md)):
+
+```csharp
+// .NET 10: Compose AI behaviors like ASP.NET Core middleware
+builder.Services.AddChatClient(pipeline => pipeline
+    .UseOpenTelemetry()           // Automatic distributed traces
+    .UseDistributedCache()        // Cache identical prompts
+    .UseFunctionInvocation()      // Auto function/tool calling
+    .Use(new OpenAIClient(apiKey)
+        .AsChatClient("gpt-5-mini")));
+```
+
+### 🆕 .NET 10: Structured Output
+
+Get strongly-typed C# objects directly from AI (covered in [Week 7, Day 3](../../Week-07-Responsible-AI-and-Production/Day-03-Structured-Output-and-Middleware/README.md)):
+
+```csharp
+// Instead of parsing free-form text...
+var result = await chatClient.GetResponseAsync<ProductInfo>(
+    "Extract product details from this description...");
+
+Console.WriteLine(result.Result?.Name);  // Strongly typed!
+```
 
 ---
 
